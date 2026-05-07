@@ -1,0 +1,11 @@
+# Triple interleave: contrastive + BERT MLM + DINOv2 SSL.
+# Round-robin through all three modes; cross-tower sync after DINOv2 block.
+# Requires both `text_only_data` and `dinov2` configs.
+# @package mode
+
+name: triple
+interleave:
+  contrastive: 4
+  mlm: 1
+  dinov2: 1
+sync_vision_from_dinov2: true

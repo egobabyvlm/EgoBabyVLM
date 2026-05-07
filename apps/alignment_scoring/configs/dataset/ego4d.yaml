@@ -1,0 +1,6 @@
+# Ego4D video clips with paired CSV transcripts (clip_filename, utterance).
+
+_target_: apps.alignment_scoring.data.video.VideoCaptionsDataset
+manifest_path: ???
+dataset_dir: ???
+num_frames: 8

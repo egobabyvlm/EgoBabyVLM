@@ -1,0 +1,5 @@
+_target_: "apps.baselines.clip.openclip_extractor.CLIPTextFeatureExtractor"
+name: "clip-vit-base-text"
+kwargs:
+  model_name: "ViT-B-16-quickgelu"
+  pretrained: "openai"

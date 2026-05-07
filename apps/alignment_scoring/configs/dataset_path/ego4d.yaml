@@ -1,0 +1,6 @@
+# Ego4D video clips, path-only — for STS / VQA / captioning where the model
+# does its own decoding.
+
+_target_: apps.alignment_scoring.data.video.VideoCaptionsPathDataset
+manifest_path: ???
+dataset_dir: ???

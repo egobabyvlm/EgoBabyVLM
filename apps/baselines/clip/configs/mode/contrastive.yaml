@@ -1,0 +1,7 @@
+# Baseline contrastive: image-text InfoNCE only. Single optimizer, single loader.
+# @package mode
+
+name: contrastive
+interleave:
+  contrastive: 1
+sync_vision_from_dinov2: false

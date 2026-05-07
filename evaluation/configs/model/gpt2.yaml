@@ -1,0 +1,5 @@
+_target_: "transformers.AutoModelForCausalLM.from_pretrained"
+name: "gpt2"
+kwargs:
+  pretrained_model_name_or_path: "gpt2"
+  trust_remote_code: false

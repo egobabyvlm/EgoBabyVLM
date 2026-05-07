@@ -1,0 +1,6 @@
+# COCO captions dataset (training split). Override `manifest_path` and
+# `dataset_dir` for your local copy.
+
+_target_: apps.alignment_scoring.data.coco.CocoCaptionsDataset
+manifest_path: ???
+dataset_dir: ???

@@ -1,0 +1,55 @@
+# @group vision
+# Semantic Segmentation on COCO-Stuff dataset (15 coarse classes)
+# Following NeCo (Pariza et al. 2024) / Ji et al. (2019) setup:
+# - 91 fine stuff classes consolidated into 15 coarse super-categories
+# - "other" class (ID 183) and unannotated pixels ignored
+# - Image size 448x448
+
+defaults:
+  - semantic_segmentation
+  - _self_
+
+output_dir: "${oc.env:HOME}/egobabyvlm_experiments/evals"
+
+train_dataset:
+  _target_: "evaluation.data.semantic_segmentation.COCOStuffDataset"
+  name: "coco_stuff_coarse_train"
+  kwargs:
+    dataset_root: "${oc.env:COCOSTUFF_ROOT}/annotations"
+    image_dir: "${oc.env:COCOSTUFF_ROOT}/train2017"
+    mode: "train"
+    image_size: 448
+    coarse_labels: true
+    # subset_fraction: 0.1  # uncomment to train on a random subset (e.g. 10%) of images
+
+val_dataset:
+  _target_: "evaluation.data.semantic_segmentation.COCOStuffDataset"
+  name: "coco_stuff_coarse_val"
+  kwargs:
+    dataset_root: "${oc.env:COCOSTUFF_ROOT}/annotations"
+    image_dir: "${oc.env:COCOSTUFF_ROOT}/train2017"
+    mode: "val"
+    image_size: 448
+    coarse_labels: true
+
+test_dataset: null
+
+backbone: ${model}
+
+pooling_strategies:
+  - pooling: "semantic_segmentation"
+    last_n_layers: 1
+  - pooling: "semantic_segmentation"
+    last_n_layers: 4
+
+learning_rates: [0.01]
+
+batch_size: 128
+epochs: 25
+drop_at: 20
+num_workers: 12
+eval_period_epochs: 1
+
+sync_bn: false
+ignore_index: 255
+seed: 42

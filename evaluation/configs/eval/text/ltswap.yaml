@@ -1,0 +1,24 @@
+# @group text
+
+defaults:
+  - ltswap_base
+  - _self_
+
+name: ltswap
+
+output_dir: "${oc.env:HOME}/egobabyvlm_experiments/evals"
+
+task_types:
+  - wordswap
+  - agrswap
+  - inflswap
+  - visual
+
+data_dir: "${oc.env:LTSWAP_DATA_ROOT}"
+
+use_prefix: false
+batch_size: 200
+
+model: ${model}
+
+seed: 42

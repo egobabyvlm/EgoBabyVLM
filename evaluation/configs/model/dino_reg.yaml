@@ -1,0 +1,5 @@
+_target_: "apps.baselines.dinov2.extractor.DINOv2FeatureExtractor"
+name: "dinov2-vitb14-reg"
+kwargs:
+  pretrained_weights: "dinov2_vitb14_reg"
+  config_file: null

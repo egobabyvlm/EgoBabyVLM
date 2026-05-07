@@ -1,0 +1,13 @@
+[files]
+extend-exclude = [
+    "apps/alignment_scoring/third_party/perception_models/apps/",
+    "apps/alignment_scoring/third_party/perception_models/core/",
+    "apps/baselines/dinov2/third_party/dinov2/",
+    "apps/swapbench/third_party/lt_swap/",
+]
+
+[default.extend-words]
+# ML acronyms that typos misreads.
+NCE = "NCE"  # InfoNCE / Noise-Contrastive Estimation
+# English suffixes used as data in apps/benchmark_creation morphology heuristics.
+ful = "ful"

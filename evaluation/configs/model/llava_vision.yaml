@@ -1,0 +1,8 @@
+# LlavaVisionFeatureExtractor — exposes the vision tower of a trained
+# EgoBabyLLaVA checkpoint as an ImageFeatureExtractor for the vision eval suite
+# (KNN, linear, ABX, depth, segmentation). Override `kwargs.model_path` for your run.
+_target_: "apps.baselines.llava.feature_extractor.LlavaVisionFeatureExtractor"
+name: "llava-vision"
+kwargs:
+  model_path: ???
+  pooling: "cls"

@@ -1,0 +1,5 @@
+_target_: "lm_eval.models.huggingface.AutoMaskedLM"
+name: "roberta-base"
+kwargs:
+  pretrained: "FacebookAI/roberta-base"
+  trust_remote_code: false

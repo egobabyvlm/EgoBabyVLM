@@ -1,0 +1,5 @@
+# COCO Karpathy split — bundles captions inline as sentences[*].raw.
+
+_target_: apps.alignment_scoring.data.coco.KarpathyCocoCaptionsDataset
+manifest_path: ???
+dataset_dir: ???

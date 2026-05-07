@@ -1,0 +1,4 @@
+_target_: "apps.baselines.dinov2.extractor.DINOv2FeatureExtractor"
+name: "dinov2-vitb14"
+kwargs:
+  config_file: null

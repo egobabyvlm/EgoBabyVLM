@@ -1,0 +1,5 @@
+_target_: "apps.baselines.clip.openclip_extractor.CLIPFeatureExtractor"
+name: "pe-core"
+kwargs:
+  model_name: "PE-Core-bigG-14-448"
+  pretrained: "meta"

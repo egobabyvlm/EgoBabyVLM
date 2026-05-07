@@ -1,0 +1,13 @@
+# @package _global_
+
+defaults:
+  - base_config
+  - eval: ???
+  - model: null
+  - _self_
+
+hydra:
+  verbose: false
+  mode: MULTIRUN
+  sweep:
+    dir: slurm

@@ -1,0 +1,17 @@
+# @group text
+
+defaults:
+  - zorro_base
+  - _self_
+
+name: zorro
+
+output_dir: "${oc.env:HOME}/egobabyvlm_experiments/evals"
+
+data_dir: "${oc.env:ZORRO_DATA_ROOT}"
+input_str: "zorro"
+num_fewshot: 0
+
+model: ${model}
+
+seed: 42

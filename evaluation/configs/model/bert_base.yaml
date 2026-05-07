@@ -1,0 +1,5 @@
+_target_: "lm_eval.models.huggingface.AutoMaskedLM"
+name: "bert-base-uncased"
+kwargs:
+  pretrained: "bert-base-uncased"
+  trust_remote_code: false

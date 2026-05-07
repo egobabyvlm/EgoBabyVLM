@@ -1,0 +1,4 @@
+# Perception-LM 8B — what the paper used for re-captioning + VQA scoring.
+
+ckpt: facebook/Perception-LM-8B
+dtype: bf16

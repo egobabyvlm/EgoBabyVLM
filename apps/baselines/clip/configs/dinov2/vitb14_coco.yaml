@@ -1,0 +1,8 @@
+# DINOv2 SSL config pointing at the vendored vitb14_coco YAML. Override
+# `config_path` on the CLI to use a different DINOv2 training config (yours
+# or one of the other vendored variants under
+# `apps/baselines/dinov2/third_party/dinov2/configs/train/`).
+# @package dinov2
+
+config_path: apps/baselines/dinov2/third_party/dinov2/configs/train/vitb14_coco.yaml
+overrides: {}

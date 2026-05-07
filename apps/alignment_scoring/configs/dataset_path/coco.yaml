@@ -1,0 +1,6 @@
+# COCO captions in path-only mode (no image loading) — used by STS scoring,
+# captioning, VQA, where the model handles its own decoding.
+
+_target_: apps.alignment_scoring.data.coco.CocoCaptionsPathDataset
+manifest_path: ???
+dataset_dir: ???

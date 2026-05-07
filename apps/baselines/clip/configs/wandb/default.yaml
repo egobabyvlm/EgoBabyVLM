@@ -1,0 +1,8 @@
+# Default W&B config — disabled by default; flip `enabled: true` and set `project`
+# to log a run.
+# @package wandb
+
+enabled: false
+project: null
+run_name: ${name}
+mode: online

@@ -1,0 +1,9 @@
+# BERT-base text encoder (uncased), CLS pooling. Match the legacy default.
+# @package model.text_encoder
+
+_target_: apps.baselines.clip.modeling.TextEncoder
+hf_model_name: bert-base-uncased
+embedding_dim: ${model.embedding_dim}
+dropout: 0.1
+freeze: false
+pooling: cls

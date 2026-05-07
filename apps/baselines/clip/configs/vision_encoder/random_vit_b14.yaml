@@ -1,0 +1,9 @@
+# torchvision ViT-B with patch size 14, random initialization. Useful when
+# training the vision tower from scratch alongside the text tower.
+# @package model.vision_encoder
+
+_target_: apps.baselines.clip.modeling.RandomViTVisionEncoder
+arch: vitb14
+embedding_dim: ${model.embedding_dim}
+image_size: 224
+freeze: false

@@ -1,0 +1,7 @@
+# Default checkpoint policy: save every epoch, keep last 3.
+# @package checkpoint
+
+save_dir: ${oc.env:HOME}/egobabyvlm_experiments/contrastive/${name}/checkpoints
+save_every: 1
+keep_last: 3
+resume_from: null

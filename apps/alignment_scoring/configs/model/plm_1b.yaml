@@ -1,0 +1,5 @@
+# Perception-LM 1B — smallest variant, useful for smoke tests and quick iteration.
+# Uses HuggingFace Hub for the checkpoint download.
+
+ckpt: facebook/Perception-LM-1B
+dtype: bf16
